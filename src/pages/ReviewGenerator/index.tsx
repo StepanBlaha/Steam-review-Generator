@@ -2,7 +2,7 @@
 import styles from "./index.module.css"
 import React, { use, useEffect, useState } from 'react';
 import axios from 'axios';
-
+import Form from "./components/Form"
 
 export default function ReviewGenerator(){
 
