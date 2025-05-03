@@ -1,12 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Suspense, lazy } from 'react';
 import './App.css';
-import ReviewGenerator from './pages/ReviewGenerator';
+import Loading from './pages/LoadingPage';
 
+const ReviewGenerator = lazy(() => import('./pages/ReviewGenerator'));
 function App() {
   return (
     <div className="App">
-      <ReviewGenerator/>
+      <Suspense fallback={<Loading/>}>
+        <ReviewGenerator/>
+      </Suspense>
     </div>
   );
 }

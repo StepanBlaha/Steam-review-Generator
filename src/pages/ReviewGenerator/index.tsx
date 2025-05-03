@@ -8,10 +8,7 @@ import { copy } from "../../utils/copyReview"
 import { Clipboard } from 'lucide-react';
 
 export default function ReviewGenerator(){
-
     const [formattedReview, setFormattedReview] = useState('');
-
-
     return(
         <>
         <div className={styles.reviewGenerator}>
@@ -22,13 +19,13 @@ export default function ReviewGenerator(){
                     <div className={styles.title}>Steam review generator</div>
                     <div className= {styles.description}>
                         <p>
-                            Easy to use generator that simplifies creation of Steam reviews. Simply check the option for each category and generate
+                            Easy to use generator that simplifies creation of Steam reviews. Simply check the option for each category and generate!
                         </p>
                         <p>
                             Made by Stepan Blaha
                         </p>
                         <p>
-                            Full code available on github -{'>'} <a href=''>sdf</a>
+                            Full code available on github -{'>'} <a href='https://github.com/StepanBlaha/Steam-review-Generator'>Click Here!</a>
                         </p>
                     </div>
 
