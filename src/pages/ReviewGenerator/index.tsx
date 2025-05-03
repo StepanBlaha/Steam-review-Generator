@@ -41,7 +41,9 @@ export default function ReviewGenerator(){
                         <div className={styles.reviewResponseButton}>
                             <div className={styles.copyButton} >
                             <Clipboard onClick={()=>copy(formattedReview)}/>
+                                <div className={styles.tooltip}>Copy</div>
                             </div>
+
                         </div>
                     </div>
                 {formattedReview ? <pre>{formattedReview}</pre> : null}
