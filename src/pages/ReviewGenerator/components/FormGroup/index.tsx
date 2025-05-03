@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react"
-import styles from "./index.module.css"
+import { useState, useEffect } from "react";
+import styles from "./index.module.css";
 import Form from "../Form";
 import Button from "../../../../components/Button";
+import { formatReviewData } from "../../../../utils/formatReview";
 interface FormGroupProps {
     setData: (value: string) => void;
   }

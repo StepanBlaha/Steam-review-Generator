@@ -1,8 +1,10 @@
 
-import styles from "./index.module.css"
+import styles from "./index.module.css";
 import React, { use, useEffect, useState } from 'react';
 import axios from 'axios';
-import Form from "./components/Form"
+import Form from "./components/Form";
+import FormGroup from "./components/FormGroup";
+import { copy } from "../../utils/copyReview"
 import { Clipboard } from 'lucide-react';
 
 export default function ReviewGenerator(){
@@ -32,7 +34,7 @@ export default function ReviewGenerator(){
 
                 </div>
                 <div className={styles.reviewForm}>
-                    <FormBlock setData={(val: string) => setFormattedReview(val)}/>
+                    <FormGroup setData={(val: string) => setFormattedReview(val)}/>
                 </div>
                 <div className={styles.reviewResponse}>
                     <div className={styles.reviewResponseHeader}>
