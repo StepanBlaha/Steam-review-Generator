@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react"
-import "./FormBlock.css"
-interface FormBlockProps {
+import styles from "./index.module.css"
+import Form from "../Form";
+import Button from "../../../../components/Button";
+interface FormGroupProps {
     setData: (value: string) => void;
   }
 
-export default function FormBlock({setData}: FormBlockProps){
-    const skib =["n","d", "ds", "dsd"]
+export default function FormGroup({setData}: FormGroupProps){
+    // Options
     const formData = {
         "Graphics" : ["You forget what reality is", "Beautiful", "Good", "Decent", "Bad", "Dont look too long at it", "MS-DOS"],
         "Gameplay": ["Very good", "Good", "It's just gameplay", "Mehh", "Watch paint dry instead", "Just don't"],
@@ -22,10 +24,10 @@ export default function FormBlock({setData}: FormBlockProps){
         "?/10": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
           
     }
-    // Initialize stats
+    // Selected options
     const [formSelections, setFormSelections] = useState<Record<string, string>>({
     });
-
+    // Hidden forms
     const [hiddenForms, setHiddenForms] = useState<Record<string, boolean>>({
         "Graphics" : false,
         "Gameplay": false,
@@ -62,7 +64,7 @@ export default function FormBlock({setData}: FormBlockProps){
     // Display all the forms
     const FormList = Object.entries(formData).map(([key, value])=>{
         return (
-            <div className="card" key={key}>
+            <div className={styles.card} key={key}>
                 <Form title={key}optionList={value} name={key} selected={formSelections[key]} onSelectionChange={handleSelection} hidden={hiddenForms[key]} onHide={handleHidden}/>
             </div>
         );
@@ -78,7 +80,7 @@ export default function FormBlock({setData}: FormBlockProps){
     return(
         <>
         {FormList}
-        <Button className="reviewGeneratorButton" onClick={handleSubmit}>Generate review</Button>
+        <Button className={styles.reviewGeneratorButton} onClick={handleSubmit}>Generate review</Button>
 
 
 
