@@ -2,6 +2,7 @@
   "name": "steam-review-generator",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -19,7 +20,6 @@
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://yourusername.github.io/your-repo-name",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
